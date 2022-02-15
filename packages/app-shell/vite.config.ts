@@ -14,6 +14,10 @@ export default defineConfig({
         __dirname,
         '../shared-lib/src/index.ts'
       ),
+      '@vue-vite-monorepo-playground/ui-lib': path.resolve(
+        __dirname,
+        '../ui-lib/src/index.ts'
+      ),
     },
   },
   build: {

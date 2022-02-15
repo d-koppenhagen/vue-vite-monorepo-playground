@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+import { MyButton } from '@vue-vite-monorepo-playground/ui-lib';
 import HelloWorld from '@/components/HelloWorld.vue';
 </script>
 
@@ -15,6 +16,8 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+
+      <my-button title="Test" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
