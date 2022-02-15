@@ -12,6 +12,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.vue",
-    "**/*.json"
-, "../../tsconfig.vite-config.json"  ]
+    "**/*.json",
+    "../../tsconfig.vite-config.json"
+  ]
 }

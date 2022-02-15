@@ -21,7 +21,7 @@
       "options": {
         "commands": [
           {
-            "command": "npm run dev",
+            "command": "npm run storybook",
             "forwardAllArgs": true
           }
         ],

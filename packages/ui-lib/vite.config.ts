@@ -17,6 +17,7 @@ module.exports = defineConfig({
       name: 'ui-lib',
       fileName: (format) => `ui-lib.${format}.js`,
     },
+    outDir: path.resolve(__dirname, '../../dist/packages/ui-lib'),
     rollupOptions: {
       // externalize deps that shouldn't be bundled
       external: ['vue'],

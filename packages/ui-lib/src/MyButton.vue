@@ -13,7 +13,7 @@ function doClick(event: MouseEvent) {
 </script>
 
 <template>
-  <button @click="doClick">{{ title }}</button>
+  <button @click="doClick()">{{ title }}</button>
 </template>
 
 <style scoped>
