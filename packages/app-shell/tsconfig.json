@@ -5,7 +5,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@vue-vite-monorepo-playground/shared-lib": [
+        "../shared-lib/src/index.ts"
+      ],
+      "@vue-vite-monorepo-playground/ui-lib": ["../ui-lib/src/index.ts"]
     }
   },
   "references": [

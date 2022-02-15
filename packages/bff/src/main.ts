@@ -5,6 +5,10 @@
 
 import * as express from 'express';
 
+import { sharedLib } from '@vue-vite-monorepo-playground/shared-lib';
+
+sharedLib();
+
 const app = express();
 
 app.get('/api', (req, res) => {

@@ -1,3 +1,4 @@
+import path from 'path';
 import { fileURLToPath, URL } from 'url';
 
 import { defineConfig } from 'vite';
@@ -9,6 +10,16 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@vue-vite-monorepo-playground/shared-lib': path.resolve(
+        __dirname,
+        '../shared-lib/src/index.ts'
+      ),
+    },
+  },
+  build: {
+    rollupOptions: {
+      // externalize deps that shouldn't be bundled
+      external: ['@vue-vite-monorepo-playground/shared-lib'],
     },
   },
 });
