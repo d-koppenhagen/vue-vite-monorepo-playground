@@ -1,7 +1,7 @@
 {
-  "root": "packages/app-shell",
-  "projectType": "application",
-  "sourceRoot": "packages/app-shell/src",
+  "root": "packages/ui-lib",
+  "projectType": "library",
+  "sourceRoot": "packages/ui-lib/src",
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
@@ -12,7 +12,7 @@
             "forwardAllArgs": true
           }
         ],
-        "cwd": "packages/app-shell",
+        "cwd": "packages/ui-lib",
         "parallel": false
       }
     },
@@ -25,20 +25,7 @@
             "forwardAllArgs": true
           }
         ],
-        "cwd": "packages/app-shell",
-        "parallel": false
-      }
-    },
-    "e2e": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "commands": [
-          {
-            "command": "npm run test:e2e",
-            "forwardAllArgs": true
-          }
-        ],
-        "cwd": "packages/app-shell",
+        "cwd": "packages/ui-lib",
         "parallel": false
       }
     },
@@ -46,14 +33,14 @@
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "command": "npm run lint",
-        "cwd": "packages/app-shell"
+        "cwd": "packages/ui-lib"
       }
     },
     "test": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "command": "npm run test:unit",
-        "cwd": "packages/app-shell"
+        "cwd": "packages/ui-lib"
       }
     }
   },

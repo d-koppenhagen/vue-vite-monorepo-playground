@@ -1,0 +1,9 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "test:unit": "vitest --environment jsdom",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  }
+}

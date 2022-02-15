@@ -3,6 +3,7 @@
   "projects": {
     "app-shell": "packages/app-shell",
     "bff": "packages/bff",
-    "shared-lib": "packages/shared-lib"
+    "shared-lib": "packages/shared-lib",
+    "ui-lib": "packages/ui-lib"
   }
 }
