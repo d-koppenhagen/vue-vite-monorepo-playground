@@ -1,0 +1,54 @@
+{
+  "root": "packages/app-shell",
+  "projectType": "application",
+  "sourceRoot": "packages/app-shell/src",
+  "targets": {
+    "build": {
+      "executor": "nx-vue3-vite:build-app",
+      "options": {
+        "dist": "dist/packages/app-shell"
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run dev",
+            "forwardAllArgs": true
+          }
+        ],
+        "cwd": "packages/app-shell",
+        "parallel": false
+      }
+    },
+    "e2e": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run test:e2e",
+            "forwardAllArgs": true
+          }
+        ],
+        "cwd": "packages/app-shell",
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run lint",
+        "cwd": "packages/app-shell"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run test:unit",
+        "cwd": "packages/app-shell"
+      }
+    }
+  },
+  "tags": []
+}
