@@ -1,0 +1,61 @@
+{
+  "root": "packages/mfe1",
+  "projectType": "application",
+  "sourceRoot": "packages/mfe1/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run build",
+            "forwardAllArgs": true
+          }
+        ],
+        "cwd": "packages/mfe1",
+        "parallel": false
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run dev",
+            "forwardAllArgs": true
+          }
+        ],
+        "cwd": "packages/mfe1",
+        "parallel": false
+      }
+    },
+    "e2e": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm run test:e2e",
+            "forwardAllArgs": true
+          }
+        ],
+        "cwd": "packages/mfe1",
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run lint",
+        "cwd": "packages/mfe1"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run test:unit",
+        "cwd": "packages/mfe1"
+      }
+    }
+  },
+  "tags": []
+}

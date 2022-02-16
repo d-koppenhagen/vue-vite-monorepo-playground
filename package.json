@@ -24,6 +24,7 @@
     "@nrwl/tao": "13.8.1",
     "@nrwl/web": "13.8.1",
     "@nrwl/workspace": "13.8.1",
+    "@originjs/vite-plugin-federation": "^1.1.0",
     "@rushstack/eslint-patch": "^1.1.0",
     "@storybook/addon-actions": "^6.5.0-alpha.39",
     "@storybook/addon-essentials": "^6.5.0-alpha.39",

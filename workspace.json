@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "app-shell": "packages/app-shell",
+    "mfe1": "packages/mfe1",
     "bff": "packages/bff",
     "shared-lib": "packages/shared-lib",
     "ui-lib": "packages/ui-lib"
