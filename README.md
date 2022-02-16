@@ -8,6 +8,28 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Smart, Fast and Extensible Build System**
 
+## Goal
+
+The goal is to provide a Nx monorepo with the following contents/capabilities:
+
+- A frontend that will work as an app shell for multiple microfrontends
+  - it should be possible to interact with those microfrontends (routing, events, etc.)
+- two separate microfrontends
+  - it should be possible to start them individually and there should no need to run inside the app shell
+- A shared library that provides components for the app shell as well as for the microfrontends
+  - The provided components can be launched inside a storybook
+- A small backend for frontend that can be connected with the app shell / microfrontends
+- A shared library that can be consumed either by the backend or the frontends
+  - It should provide shared helper functions, models, etc.
+
+![app composition overview](./assets/app-composition.drawio.svg)
+
+### Additional Requirements
+
+- All apps and libs must be written in TypeScript.
+- The frontend Apps and libs should be bundled by Vite.
+- All apps and libs can work / be deployed standalone
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
