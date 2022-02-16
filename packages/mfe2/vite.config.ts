@@ -7,16 +7,18 @@ import federation from '@originjs/vite-plugin-federation';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 5002,
+  },
   plugins: [
     vue(),
     federation({
-      name: 'layout',
+      name: 'home',
       filename: 'remoteEntry.js',
-      remotes: {
-        mfe1: 'http://localhost:5001/assets/remoteEntry.js',
-        mfe2: 'http://localhost:5002/assets/remoteEntry.js',
+      exposes: {
+        './App': './src/App.vue',
       },
-      shared: ['vue', 'vue-router', 'pinia'],
+      shared: ['vue', 'vue-router'],
     }),
   ],
   resolve: {
@@ -33,7 +35,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, '../../dist/packages/app-shell'),
+    outDir: path.resolve(__dirname, '../../dist/packages/mfe2'),
     target: 'esnext',
     rollupOptions: {
       // externalize deps that shouldn't be bundled

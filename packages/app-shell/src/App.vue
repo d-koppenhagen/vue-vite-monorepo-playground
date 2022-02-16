@@ -1,130 +1,46 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 import { MyButton } from '@vue-vite-monorepo-playground/ui-lib';
-import HelloWorld from '@/components/HelloWorld.vue';
+
+import TheHeader from './components/TheHeader.vue';
+import TheFooter from './components/TheFooter.vue';
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+  <TheHeader title="App Shell">
+    <h2>Nx Monorepo Micro Frontend Demo using Vite</h2>
+  </TheHeader>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="page-content">
+    <aside class="drawer">
+      <mfe2-app />
+    </aside>
 
+    <main>
       <mfe1-app />
+    </main>
+  </div>
 
-      <my-button title="Test" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <TheFooter>Some footer content</TheFooter>
 </template>
 
-<style>
-@import '@/assets/base.css';
+<style scoped lang="scss">
+.page-content {
+  border-left: 2px dashed red;
+  border-right: 2px dashed red;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding-bottom: 1rem;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+  .aside {
+    grid-area: 1 / 1 / 2 / 2;
   }
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .main {
+    grid-area: 1 / 2 / 2 / 3;
   }
 }
 </style>

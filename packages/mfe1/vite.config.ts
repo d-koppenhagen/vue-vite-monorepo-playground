@@ -18,7 +18,7 @@ export default defineConfig({
       exposes: {
         './App': './src/App.vue',
       },
-      shared: ['vue'],
+      shared: ['vue', 'vue-router'],
     }),
   ],
   resolve: {
@@ -39,7 +39,10 @@ export default defineConfig({
     target: 'esnext',
     rollupOptions: {
       // externalize deps that shouldn't be bundled
-      external: ['@vue-vite-monorepo-playground/shared-lib'],
+      // external: [
+      //   path.resolve(__dirname, '../shared-lib/src/index.ts'),
+      //   path.resolve(__dirname, '../ui-lib/src/index.ts'),
+      // ],
       output: {
         minifyInternalExports: false,
       },

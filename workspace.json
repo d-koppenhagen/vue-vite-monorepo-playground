@@ -3,6 +3,7 @@
   "projects": {
     "app-shell": "packages/app-shell",
     "mfe1": "packages/mfe1",
+    "mfe2": "packages/mfe2",
     "bff": "packages/bff",
     "shared-lib": "packages/shared-lib",
     "ui-lib": "packages/ui-lib"
